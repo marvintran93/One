@@ -8,10 +8,12 @@ export default async function ShopLayout({ children }: { children: React.ReactNo
   const brand = process.env.NEXT_PUBLIC_BRAND_NAME ?? "Local Delivery Co.";
   return (
     <div className="min-h-screen flex flex-col">
-      <Nav brand={brand} />
-      <main className="flex-1 mx-auto w-full max-w-4xl px-4 py-6">{children}</main>
-      <footer className="border-t border-ink-200 py-6 text-center text-xs text-ink-500">
-        {brand}. Members only. Discreet shipping &amp; billing.
+      <Nav />
+      <main className="flex-1 mx-auto w-full max-w-5xl px-5 py-10">{children}</main>
+      <footer className="border-t border-ink-200 py-10 text-center">
+        <div className="text-[10px] uppercase tracking-widest text-ink-500">
+          {brand} · Members only · Discreet packaging &amp; billing
+        </div>
       </footer>
     </div>
   );

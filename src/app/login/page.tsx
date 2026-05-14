@@ -6,11 +6,11 @@ export const dynamic = "force-dynamic";
 
 export default function LoginPage() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12">
+    <main className="min-h-screen flex flex-col items-center justify-center px-5 py-16">
       <div className="w-full max-w-sm">
-        <div className="mb-8 text-center">
-          <Brand />
-          <p className="mt-2 text-xs text-ink-500 uppercase tracking-widest">Members only</p>
+        <div className="mb-10 text-center flex flex-col items-center gap-3">
+          <Brand size="lg" />
+          <p className="eyebrow">Members only</p>
         </div>
         <Suspense fallback={<div className="card p-6 text-sm text-ink-500">Loading…</div>}>
           <LoginForm />

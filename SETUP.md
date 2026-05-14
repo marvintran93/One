@@ -268,6 +268,45 @@ You'll get pinged on new account requests and new paid orders.
 
 ---
 
+## Customize the look
+
+The aesthetic is **organic / luxury** by default: warm sand background, espresso ink, hairline borders, Cormorant Garamond serif headings, Inter body text. You can adjust it without writing code, or ask me to make bigger changes.
+
+### Change the brand name
+
+Vercel → **Settings → Environment Variables** → edit `NEXT_PUBLIC_BRAND_NAME` → redeploy.
+
+### Upload your logo
+
+The fastest way:
+
+1. Save your logo as a PNG, JPG, or SVG. **Transparent PNG** or **SVG** works best. Aim for roughly 600×200 px (or any tall-rectangle ratio that crops cleanly).
+2. On GitHub, go to https://github.com/marvintran93/one → **public** folder → **Add file → Upload files** → drag your logo in → name it `logo.png` (or whatever extension matches) → **Commit changes** at the bottom.
+3. In Vercel → **Settings → Environment Variables** → set `NEXT_PUBLIC_LOGO_URL` to `/logo.png` (with the leading slash) → redeploy.
+
+Your logo will now appear in the nav, on the sign-in screen, and on the sign-up / pending-approval screens — replacing the text brand name. Leave `NEXT_PUBLIC_LOGO_URL` blank to revert to the typographic version.
+
+If you'd rather host the logo externally (e.g. in Supabase Storage or a CDN), put the full URL in `NEXT_PUBLIC_LOGO_URL` instead of `/logo.png`. The image must be publicly accessible.
+
+### Change the billing descriptor
+
+That's the short name that appears on customer card statements. Set `NEXT_PUBLIC_BILLING_DESCRIPTOR` in Vercel **and** match it in **Stripe → Settings → Public details → Statement descriptor**. Keep it under 22 characters.
+
+### Want bigger style changes?
+
+These require a code change (one commit, one redeploy — I'll do it for you, just describe what you want):
+
+- **A different palette** — e.g. cream + oxblood, off-black + champagne, sage + bone, all-black with a single jewel-tone accent.
+- **A different font pairing** — e.g. Fraunces + Manrope (modern luxury), Playfair + Lato (classic), all-sans Söhne-style.
+- **A landing/hero section** above the catalog with imagery and a short statement.
+- **Product image uploader in the admin** so you can attach real photos instead of the placeholder block (this needs to be built; ask).
+- **A custom email template** for SendGrid notifications so they match the site.
+- **Tighter or more spacious layout**, sharper or softer corners, with-shadows or flat.
+
+Just tell me the direction and I'll ship it.
+
+---
+
 ## Custom domain (optional)
 
 Vercel gives you a `.vercel.app` URL by default. To use your own domain:

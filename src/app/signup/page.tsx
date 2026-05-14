@@ -81,26 +81,26 @@ export default function SignupPage() {
 
   if (done) {
     return (
-      <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12">
-        <div className="w-full max-w-md card p-8 text-center">
-          <Brand />
-          <h1 className="mt-6 text-xl font-semibold">Check your email</h1>
-          <p className="mt-2 text-sm text-ink-600">
-            We sent a confirmation link to <span className="font-medium">{email}</span>.
+      <main className="min-h-screen flex flex-col items-center justify-center px-5 py-16">
+        <div className="w-full max-w-md card p-10 text-center">
+          <div className="flex justify-center"><Brand size="md" /></div>
+          <h1 className="mt-6 font-serif text-2xl text-ink-900">Check your email</h1>
+          <p className="mt-3 text-sm text-ink-600 leading-relaxed">
+            We sent a confirmation link to <span className="text-ink-900">{email}</span>.
             Once confirmed, your account will be reviewed for approval.
           </p>
-          <Link href="/login" className="btn-secondary mt-6 inline-flex">Back to sign in</Link>
+          <Link href="/login" className="btn-secondary mt-8 inline-flex">Back to sign in</Link>
         </div>
       </main>
     );
   }
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12">
+    <main className="min-h-screen flex flex-col items-center justify-center px-5 py-16">
       <div className="w-full max-w-md">
-        <div className="mb-6 text-center">
-          <Brand />
-          <p className="mt-2 text-xs text-ink-500 uppercase tracking-widest">Request access</p>
+        <div className="mb-8 text-center flex flex-col items-center gap-3">
+          <Brand size="lg" />
+          <p className="eyebrow">Request access</p>
         </div>
         <form onSubmit={onSubmit} className="card p-6 space-y-4">
           <div className="grid grid-cols-2 gap-3">

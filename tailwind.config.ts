@@ -7,21 +7,32 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Warm sand → espresso palette. Page bg is ink-50, primary is ink-900,
+        // hairline borders are ink-200, muted text is ink-500.
         ink: {
-          50: "#f7f7f6",
-          100: "#ebebe9",
-          200: "#d3d3cf",
-          300: "#b1b1ab",
-          400: "#888881",
-          500: "#6a6a64",
-          600: "#52524d",
-          700: "#3f3f3b",
-          800: "#262624",
-          900: "#161614"
+          50:  "#f4eee3",
+          100: "#ebe3d3",
+          200: "#d8caaf",
+          300: "#b8a583",
+          400: "#8a785b",
+          500: "#6c5e44",
+          600: "#524631",
+          700: "#3d3422",
+          800: "#2a2316",
+          900: "#1a1610"
+        },
+        // Restrained accent for selected/active states. Used sparingly.
+        moss: {
+          500: "#5b6b46",
+          600: "#465536"
         }
       },
       fontFamily: {
-        sans: ["ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"]
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+        serif: ["var(--font-serif)", "ui-serif", "Georgia", "Cambria", "Times New Roman", "serif"]
+      },
+      letterSpacing: {
+        widest: "0.18em"
       }
     }
   },
